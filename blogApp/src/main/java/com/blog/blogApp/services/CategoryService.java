@@ -4,6 +4,8 @@ import com.blog.blogApp.dtos.CategoryDTO;
 import com.blog.blogApp.models.Category;
 import com.blog.blogApp.respository.CategoryRepository;
 
+import jakarta.transaction.Transactional;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Transactional
 @Service
 public class CategoryService {
 
